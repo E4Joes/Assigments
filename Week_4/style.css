@@ -1,0 +1,187 @@
+
+
+/* first we set the base styling for our web page.
+This will override browser's default style and set padding amd margin to nothing */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.google.com/specimen/Lexend+Deca');
+:root{
+    --color-primary:hsl(31, 77%, 52%);
+    --color-secondary:hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+    --color-white: #ffffff;
+    --color-black: #111;
+}
+
+/* White text throughout */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: white;
+}
+
+/* Target all h3 with class of title */
+.title {
+    color: var(--color-white);
+    font-size: 20px;
+    text-align: left;
+    padding-left: 60px;
+    padding-top: 40px;
+    font-weight: 700;
+}
+
+/* Target the paragraphs with class name text */
+.text {
+    color: var(--color-white);
+    font-size: 14px;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 150px;
+    padding-top: 60px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+
+/* Styling all the h5 elements*/
+.learn1 {
+    color: var(--color-primary);
+    font-size: 12px;
+    width: 40%;
+    padding: 5px 20px;
+    margin: 30px 60px;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+
+.learn2 {
+    color: var(--color-secondary);
+    font-size: 12px;
+    width: 40%;
+    padding: 5px 20px;
+    margin: 30px 60px;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+
+.learn3 {
+    color: var(--color-very-dark-cyan);
+    font-size: 12px;
+    width: 40%;
+    padding: 5px 20px;
+    margin: 30px 60px;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+
+/* We do intend for all the stat divs to be aligned horizontally (side-by-side).
+Let's do this using the CSS Flexbox */
+/* Display horizontally with little space around them */
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Add some padding around the container. Align text center */
+.stats {
+    padding: 60px 150px;
+    text-align: center;
+    font-weight: 400;
+   
+}
+
+/* Set margin and width */
+.stat1 {
+    
+    text-align: center;
+    width: 800px;
+    background-color: var(--color-primary);
+}
+
+.stat2 {
+    
+    text-align: center;
+    width: 800px;
+    background-color: var(--color-secondary);
+}
+
+.stat3 {
+    
+    text-align: center;
+    width: 800px;
+    background-color: var(--color-very-dark-cyan);
+}
+
+/* time to fix the icons */
+.icons {
+    margin-top: 40px;
+    margin-right: 140px;
+    
+}
+/* End of stat section styling */
+
+/* Styling grid_layout section */
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: orangered;
+    height: 200px;
+}
+
+.item2{
+    background-color: darkgoldenrod;
+}
+
+.item3 {
+    background-color: green;
+    height: 200px;
+}
+
+.item4 {
+    background-color: cornflowerblue;
+}
+
+.item5 {
+    background-color: cornflowerblue;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: var(--color-black);
+    padding: 20px 80px;
+    margin-bottom: 50px;
+    
+}
+
+.grid-container > div {
+  
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+/* End of styling grid_layout section */
+
+/* For Desktop */
+@media (max-width: 1440px){
+    .flex .stats{
+        height: 400px;
+    }
+    .grid-container .grid_layout{
+        height: 400px;
+    }
+   
+}
+/* For Mobile */
+@media (max-width: 375px){
+    .flex .grid-container{
+        width: 100%;
+    }
